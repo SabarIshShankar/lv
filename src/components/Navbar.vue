@@ -3,7 +3,7 @@
     <div class="nav">
       <input type="checkbox" id="nav-check" />
       <div class="nav-header">
-        <div class="nav-title">brand</div>
+        <div class="nav-title">CODER.</div>
       </div>
       <div class="nav-btn">
         <label for="nav-check">
@@ -15,6 +15,7 @@
 
       <div class="nav-links">
         <a>Youtube</a>
+        <a>Discord</a>
       </div>
     </div>
   </div>
@@ -33,13 +34,12 @@ export default {
 
 body {
   margin: 0px;
-  font-family: "segoe ui";
 }
 
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #ff1f1f;
+  background-color: #ffffff;
   position: relative;
 }
 
@@ -50,8 +50,10 @@ body {
 .nav > .nav-header > .nav-title {
   display: inline-block;
   font-size: 22px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   padding: 10px 10px 10px 10px;
+  font-weight: 700;
+  color: red;
 }
 
 .nav > .nav-btn {
@@ -60,6 +62,7 @@ body {
 
 .nav > .nav-links {
   display: inline;
+  float: right;
   font-size: 18px;
 }
 
@@ -67,11 +70,14 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #ff7676;
+  color: #000000;
+  font-size: 18px;
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
+  border-left: 6px solid red;
+  transition: 0.4s;
 }
 
 .nav > #nav-check {
@@ -93,13 +99,13 @@ body {
   }
   .nav > .nav-btn > label:hover,
   .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
   }
   .nav > .nav-btn > label > span {
     display: block;
     width: 25px;
     height: 10px;
-    border-top: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(0, 0, 0);
   }
   .nav > .nav-links {
     position: absolute;
@@ -123,5 +129,9 @@ body {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+}
+::selection {
+  color: rgb(0, 0, 0);
+  background-color: red;
 }
 </style>

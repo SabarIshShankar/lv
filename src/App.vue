@@ -1,9 +1,10 @@
+
 <template>
   <div id="app">
     <Navbar />
 
     <div id="main">
-      <MainPage msg="Hello Vue in CodeSandbox!" />
+      <MainPage />
     </div>
   </div>
 </template>
@@ -23,10 +24,12 @@ export default {
 
 <style>
 #app {
-  font-family: Inter;
+  font-family: Poppins;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #main {
   margin: 20px;
