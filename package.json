@@ -13,6 +13,7 @@
     "bootstrap-vue": "2.21.2",
     "tail": "2.2.3",
     "vue": "^2.6.11",
+    "vue-router": "3.5.2",
     "vue-tailwind": "2.4.2",
     "vue-youtube": "1.4.0"
   },

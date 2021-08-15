@@ -1,12 +1,35 @@
 import Vue from "vue";
 import App from "./App.vue";
-import { BNavbar } from "bootstrap-vue";
-import VueYoutube from 'vue-youtube'
- 
-Vue.use(VueYoutube)
+import router from "./router";
+import * as resources from "./resources";
+import resource from "./plugin/resource";
+
+import deviceQueries from "./plugins/device-queries";
+import Pace from "pace-progress";
 
 Vue.config.productionTip = false;
-Vue.component("b-navbar", BNavbar);
+
+Vue.use(resource, {
+  resources,
+  endpoint: "/static/api"
+});
+
+Vue.use(deviceQueries, {
+  phone: "max-width: 567px",
+  tablet: "min-width: 568px",
+  mobile: "max-width: 1024px",
+  laptop: "min-width: 1025px",
+  desktop: "min-width: 1280px",
+  monitor: "min-width: 1448px"
+});
+
 new Vue({
-  render: (h) => h(App)
-}).$mount("#app");
+  router,
+  render: (h) => h(App),
+  mounted() {
+    Pace.start();
+    Pace.on("hide", () => {
+      document.dispatchEvent(new Event("app.rendered"));
+    });
+  }
+}).mount("#app");

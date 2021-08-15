@@ -1,30 +1,14 @@
-
 <template>
-  <div id="app">
-    <Navbar />
-
-    <div id="main">
-      <MainPage />
-    </div>
-  </div>
+<router-view id="app"/>
 </template>
 
 <script>
-import MainPage from "./components/MainPage";
-import Navbar from "./components/Navbar";
-
-export default {
-  name: "App",
-  components: {
-    MainPage,
-    Navbar,
-  },
-};
+export default {name: 'app'}
 </script>
 
 <style>
 #app {
-  font-family: Poppins;
+  font-family: Inter;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000;
