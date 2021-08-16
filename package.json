@@ -11,13 +11,7 @@
     "@vue/cli-plugin-babel": "4.1.1",
     "bootstrap": "5.0.2",
     "bootstrap-vue": "2.21.2",
-    "pace-progress": "1.0.2",
-    "scrollto-with-animation": "3.0.4",
-    "tail": "2.2.3",
-    "vue": "^2.6.11",
-    "vue-router": "3.5.2",
-    "vue-tailwind": "2.4.2",
-    "vue-youtube": "1.4.0"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "4.1.1",
@@ -32,10 +26,7 @@
     "env": {
       "node": true
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
+    "extends": ["plugin:vue/essential", "eslint:recommended"],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
@@ -46,15 +37,7 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "keywords": [
-    "vue",
-    "vuejs",
-    "starter"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "keywords": ["vue", "vuejs", "starter"],
   "description": "Vue.js example starter project"
 }
