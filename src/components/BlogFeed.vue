@@ -34,3 +34,80 @@
     </li>
   </transition-group>
 </template>
+
+<script>
+import { scrollTo, wordsl, prettyDate } from "../helpers";
+
+export default {
+  name: "blog-feed",
+  resource: "BlogFeed",
+
+  props: {
+    filters: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  data() {
+    return {
+      posts: [],
+      transition: "preview-appear",
+    };
+  },
+  computed: {
+    reading() {
+      return this.filters.post;
+    },
+    scrollDelay() {
+      return this.$device.phone ? 0 : 560;
+    },
+    figureClass() {
+      return { "preview__figure--mobile": this.$device.phone && this.reading };
+    },
+    feed() {
+      const filterBy = {
+        post: (filter, { id }) => filter === id,
+        author: (filter, { author }) => filter === this.wordsl(author),
+      };
+      if (!Object.keys(this.filters).length) return this.posts;
+
+      return this.posts.filter((post) => {
+        return Object.keys(this.filters).every((filter) => {
+          return filterBy[filter](this.filters[filter], post);
+        });
+      });
+    },
+  },
+  methods: {
+    scrollTo,
+    wordsl,
+    prettyDate,
+    getBgImg(src) {
+      return { backgroundImage: `url(${src}` };
+    },
+    stackPosts(posts) {
+      let interval;
+      const stack = () => {
+        this.posts.push(posts.shift());
+
+        if (!posts.length) {
+          this.transition = "preview";
+          clearInterval(interval);
+        }
+      };
+      interval = setInterval(stack, 125);
+    },
+  },
+
+  mounted() {
+    this.$getResource("feed").then((posts) => {
+      if (!Object.keys(this.filters).length) {
+        this.stackPosts(posts);
+      } else {
+        this.posts = posts;
+        this.transition = "preview";
+      }
+    });
+  },
+};
+</script>
