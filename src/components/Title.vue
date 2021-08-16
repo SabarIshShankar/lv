@@ -1,27 +1,20 @@
-<template>
-  <div class="title">
-    <h1>{{ msg }}</h1>
-  </div>
-</template>
+<template><h1 className="title">Hey</h1></template>
 
 <script>
 export default {
   name: "Title",
-  props: {
-    msg: String,
-  },
 };
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap");
 *,
 .title,
-h3 {
+h1 {
   font-family: "Syncopate";
   color: #fff;
-  position: absolute;
   right: 0;
-  padding-right: 5px;
+  position: relative;
+  padding-right: 20px;
 }
 
 hr {

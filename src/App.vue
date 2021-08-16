@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div style="max-width: 1100px">
     <Title className="right " msg="DESIGN" />
     <Body />
   </div>

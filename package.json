@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
-    "vue": "^2.6.11"
+    "tailwindcss": "2.2.7",
+    "vue": "^2.6.11",
+    "vue-tailwind": "2.4.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "4.1.1",
