@@ -11,7 +11,7 @@ export default new Router({
     {
       path: "/",
       name: "feed",
-      component: "Blog"
+      component: Blog
     },
     {
       path: "/by/:author",

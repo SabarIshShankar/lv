@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import * as resources from "./resources";
-import resource from "./plugin/resource";
+import resource from "./plugins/resource";
 
 import deviceQueries from "./plugins/device-queries";
 import Pace from "pace-progress";
@@ -32,4 +32,4 @@ new Vue({
       document.dispatchEvent(new Event("app.rendered"));
     });
   }
-}).mount("#app");
+}).$mount("#app");

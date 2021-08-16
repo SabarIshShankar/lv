@@ -11,6 +11,7 @@
     "@vue/cli-plugin-babel": "4.1.1",
     "bootstrap": "5.0.2",
     "bootstrap-vue": "2.21.2",
+    "pace-progress": "1.0.2",
     "tail": "2.2.3",
     "vue": "^2.6.11",
     "vue-router": "3.5.2",
