@@ -12,7 +12,7 @@ export const scrollTo = (pos, duration = 600, delay = 0) =>
     }, delay);
   });
 
-export const wordsl = (words) => words.toLowerCase().replace(" ", "-");
+export const kebabify = (words) => words.toLowerCase().replace(" ", "-");
 
 export const pretyDate = (date) =>
   new Date(date).toString

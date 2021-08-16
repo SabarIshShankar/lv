@@ -22,7 +22,7 @@
 
               <router-link
                 class="preview__author"
-                :to="`/by/${wordsl(post.author)}`"
+                :to="`/by/${kebabify(post.author)}`"
                 @click.native="scrollTo(0, 220, scrollDelay)"
               >
                 {{ post.author }}
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { scrollTo, wordsl, prettyDate } from "../helpers";
+import { scrollTo, kebabify, prettyDate } from "../helpers";
 
 export default {
   name: "blog-feed",
@@ -67,7 +67,7 @@ export default {
     feed() {
       const filterBy = {
         post: (filter, { id }) => filter === id,
-        author: (filter, { author }) => filter === this.wordsl(author),
+        author: (filter, { author }) => filter === this.kebabify(author),
       };
       if (!Object.keys(this.filters).length) return this.posts;
 
@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     scrollTo,
-    wordsl,
+    kebabify,
     prettyDate,
     getBgImg(src) {
       return { backgroundImage: `url(${src}` };

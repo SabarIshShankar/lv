@@ -6,7 +6,7 @@
 
         <h3 class="post__meta">
           by
-          <router-link class="psot__author" :to="`/by/${wordsl(author)}`">
+          <router-link class="psot__author" :to="`/by/${kebabify(author)}`">
             {{ author }}
           </router-link>
           <span class="post__sep"></span>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { wordsl, prettyDate } from "../helpers";
+import { kebabify, prettyDate } from "../helpers";
 
 export default {
   name: "blog-post",
@@ -50,7 +50,7 @@ export default {
   },
 
   methods: {
-    wordsl,
+    kebabify,
     prettyDate,
   },
 
