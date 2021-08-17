@@ -9,11 +9,9 @@
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "4.1.1",
-    "tailwindcss": "2.2.7",
     "vue": "^2.6.11",
     "vue-easy-lightbox": "0.16.1",
-    "vue-router": "3.5.2",
-    "vue-tailwind": "2.4.2"
+    "vue-router": "3.5.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "4.1.1",
@@ -28,10 +26,7 @@
     "env": {
       "node": true
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
+    "extends": ["plugin:vue/essential", "eslint:recommended"],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
@@ -42,15 +37,7 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "keywords": [
-    "vue",
-    "vuejs",
-    "starter"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "keywords": ["vue", "vuejs", "starter"],
   "description": "Vue.js example starter project"
 }
