@@ -12,6 +12,7 @@
     "tailwindcss": "2.2.7",
     "vue": "^2.6.11",
     "vue-easy-lightbox": "0.16.1",
+    "vue-router": "3.5.2",
     "vue-tailwind": "2.4.2"
   },
   "devDependencies": {

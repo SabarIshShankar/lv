@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue-easy-lightbox@next/dist/vue-easy-lightbox.umd.min.js"></script>
     <title>Design</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
   </head>
   <body>
     <noscript>
@@ -16,6 +23,15 @@
       >
     </noscript>
     <div id="app"></div>
+    <script
+      type="text/javascript"
+      src="https://portfolio.sabarishshankar.repl.co/gridify/gridify.min.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        gridify.init();
+      };
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
