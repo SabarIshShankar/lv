@@ -1,21 +1,8 @@
 <template>
-  <div style="max-width: 1100px">
-    <Title className="right " msg="DESIGN" />
-    <Body />
-  </div>
+  <router-view />
 </template>
 
 <script>
-import Title from "./components/Title";
-import Body from "./components/Body";
-
-export default {
-  name: "App",
-  components: {
-    Title,
-    Body,
-  },
-};
 </script>
 
 <style>

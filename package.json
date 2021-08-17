@@ -11,6 +11,7 @@
     "@vue/cli-plugin-babel": "4.1.1",
     "tailwindcss": "2.2.7",
     "vue": "^2.6.11",
+    "vue-easy-lightbox": "0.16.1",
     "vue-tailwind": "2.4.2"
   },
   "devDependencies": {
